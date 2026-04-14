@@ -19,11 +19,14 @@ padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
+
 body{
 background:#0f172a;
 color:white;
 scroll-behavior:smooth;
 }
+
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
@@ -51,6 +54,25 @@ font-size:14px;
 
 nav a:hover{
 color:#22c55e;
+}
+
+/* CONTACT ICONS */
+.contact-icons{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+}
+
+.contact-icons a{
+font-size:28px;
+color:white;
+transition:0.3s;
+}
+
+.contact-icons a:hover{
+color:#22c55e;
+transform:scale(1.3);
 }
 
 /* HERO */
@@ -108,11 +130,13 @@ text-align:center;
 font-size:26px;
 margin-bottom:30px;
 }
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
+
 .card{
 background:#1e293b;
 padding:20px;
@@ -123,6 +147,7 @@ transition:0.3s;
 .card:hover{
 transform:translateY(-5px);
 }
+
 .card h3{
 color:#22c55e;
 margin-bottom:10px;
@@ -134,28 +159,113 @@ opacity:0.85;
 margin:5px 0;
 font-size:14px;
 }
+
 .grid a{
 color:#22c55e;
 text-decoration:none;
 font-size:14px;
 }
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-font-size:14px;
+
+/* ===== FOOTER PROFESSIONAL (FIXED) ===== */
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+padding:50px 8%;
+background:linear-gradient(135deg,#020617,#0f172a);
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
+.footer-section h3,
+.footer-section h4{
+color:#22c55e;
+margin-bottom:12px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.footer-section p{
+font-size:14px;
+margin:6px 0;
+opacity:0.75;
+line-height:1.6;
+}
+
+.footer-section a{
+color:#cbd5f5;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-section a:hover{
+color:#22c55e;
+padding-left:5px;
+}
+
+.footer-icons{
+display:flex;
+gap:15px;
+margin-top:10px;
+}
+
+.footer-icons a{
+width:40px;
+height:40px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#1e293b;
+color:white;
+transition:0.3s;
+box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+
+.footer-icons a:hover{
+background:#22c55e;
+color:#020617;
+transform:translateY(-3px) scale(1.1);
+box-shadow:0 0 15px #22c55e;
+}
+
+footer hr{
+border:none;
+height:1px;
+background:rgba(255,255,255,0.08);
+margin:0 8%;
+}
+
+.footer-bottom{
+text-align:center;
+padding:15px;
+font-size:13px;
+color:#94a3b8;
+letter-spacing:0.5px;
+background:#020617;
+}
+
+/* RESPONSIVE */
 @media(max-width:768px){
+
 .hero h1{
 font-size:26px;
 }
+
 nav{
 flex-direction:column;
 gap:10px;
 }
+
+.footer-container{
+text-align:center;
 }
 
+.footer-icons{
+justify-content:center;
+}
+
+}
 </style>
 
 </head>
@@ -170,6 +280,7 @@ gap:10px;
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
 <a href="#internships">Internships</a>
+<a href="#certificates">Certificates</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
@@ -300,7 +411,27 @@ Dynamic final-year B.Tech Computer Science Engineering student with skills in Ja
 </div>
 
 </section>
+<!-- CERTIFICATES -->
+<section class="section" id="certificates">
+<h2 class="title">Certifications & Training</h2>
 
+<div class="card">
+
+<p>• HackerRank – Python (Basic), Problem Solving</p>
+
+<p>• NPTEL – Industry 4.0 and Internet of Things</p>
+
+<p>• Code Tantra – Python Programming Workshop</p>
+
+<p>• Supraja Technologies – Cyber Security Level 1</p>
+
+<p>• Scaler Master Class – Build an Ecommerce Platform using React</p>
+
+<p>• ExcelR – Full Stack Web Development (Long Term Training)</p>
+
+</div>
+
+</section>
 <!-- PROJECTS -->
 <section class="section" id="projects">
 <h2 class="title">Projects</h2>
@@ -327,22 +458,78 @@ Dynamic final-year B.Tech Computer Science Engineering student with skills in Ja
 <section class="section" id="contact">
 <h2 class="title">Contact</h2>
 
-<div class="card">
-<p>Email: badanalavinay@gmail.com</p>
-<p>Phone: 7330641891</p>
+<div class="contact-icons">
 
-<p>
-<a href="https://github.com/vinaybadanala">GitHub</a> |
-<a href="https://www.linkedin.com/in/vinay-naga-sai-ram-badanala-a865422b4/">LinkedIn</a>
-</p>
+<!-- EMAIL -->
+<a href="mailto:badanalavinay@gmail.com" target="_blank">
+<i class="fas fa-envelope"></i>
+</a>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/917330641891?text=Hi%20Vinay%2C%20I%20saw%20your%20portfolio" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- GITHUB -->
+<a href="https://github.com/vinaybadanala" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<!-- LINKEDIN -->
+<a href="https://www.linkedin.com/in/vinay-naga-sai-ram-badanala-a865422b4/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
 </div>
 
 </section>
-
+<!-- FOOTER -->
 <!-- FOOTER -->
 <footer>
-<p>© 2026 Vinay Badanala</p>
-</footer>
 
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-section">
+<h3>Vinay Badanala</h3>
+<p>Full Stack Java Developer passionate about building modern web applications.</p>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="footer-section">
+<h4>Quick Links</h4>
+<p><a href="#about">About</a></p>
+<p><a href="#skills">Skills</a></p>
+<p><a href="#projects">Projects</a></p>
+<p><a href="#contact">Contact</a></p>
+</div>
+
+<!-- CONTACT INFO -->
+<div class="footer-section">
+<h4>Contact</h4>
+<p>Email: badanalavinay@gmail.com</p>
+<p>Phone: 7330641891</p>
+</div>
+
+<!-- SOCIAL -->
+<div class="footer-section">
+<h4>Follow Me</h4>
+
+<div class="footer-icons">
+<a href="mailto:badanalavinay@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://wa.me/917330641891"><i class="fab fa-whatsapp"></i></a>
+<a href="https://github.com/vinaybadanala"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/vinay-naga-sai-ram-badanala-a865422b4/"><i class="fab fa-linkedin"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="footer-bottom">© 2026 Vinay Badanala | All Rights Reserved</p>
+
+</footer>
 </body>
 </html>
