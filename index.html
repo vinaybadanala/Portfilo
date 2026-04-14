@@ -6,8 +6,9 @@
 <meta charset="UTF-8">
 <meta name="author" content="Vinay Naga Sai Ram Badanala">
 <meta name="description" content="Portfolio of Vinay Naga Sai Ram Badanala, Full Stack Java Developer">
-<meta name="keywords" content="Vinay Naga Sai Ram Badanala, Full Stack Developer, Java Developer, Portfolio,UIUX developer,Web Developer">
+<meta name="keywords" content="Vinay Naga Sai Ram Badanala, Full Stack Developer, Java Developer, Portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -105,20 +106,6 @@ opacity:0.8;
 margin-top:10px;
 }
 
-.btn{
-margin-top:20px;
-padding:10px 20px;
-background:#22c55e;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:14px;
-}
-
-.btn:hover{
-background:#16a34a;
-}
-
 /* SECTION */
 .section{
 padding:80px 8%;
@@ -154,19 +141,99 @@ font-size:16px;
 }
 
 .card p{
-opacity:0.85;
-margin:5px 0;
 font-size:14px;
+line-height:1.6;
+margin:10px 0 15px;
+color:#cbd5e1;
+}
+/* DOWNLOAD BUTTON SPECIAL */
+.btn.download{
+background-color:green;
+color:white;
+box-shadow:0 4px 15px rgba(249,115,22,0.4);
+position:relative;
+overflow:hidden;
 }
 
+.btn.download:hover{
+transform:translateY(-2px) scale(1.05);
+box-shadow:0 6px 20px rgba(249,115,22,0.6);
+}
+
+/* Glow animation */
+.btn.download::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.2);
+transition:0.5s;
+}
+
+.btn.download:hover::after{
+left:100%;
+}
+/* HERO DOWNLOAD BUTTON FIX */
+.hero .btn.download{
+margin-top:15px;
+display:inline-block;
+}
+
+.hero{
+gap:10px;   /* elements madhya spacing */
+}
+/* PROJECT BUTTONS */
+.btn-group{
+display:flex;
+gap:15px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+transition:0.3s;
+display:inline-block;
+min-width:140px;
+text-align:center;
+}
+
+/* Live */
+.btn.live{
+background:#22c55e;
+color:white;
+}
+
+.btn.live:hover{
+background:#16a34a;
+transform:translateY(-2px);
+}
+
+/* Code */
+.btn.code{
+background:#3b82f6;
+color:white;
+}
+
+.btn.code:hover{
+background:#2563eb;
+transform:translateY(-2px);
+}
+
+/* LINKS */
 .grid a{
 color:#22c55e;
 text-decoration:none;
 font-size:14px;
 }
 
-/* ===== FOOTER PROFESSIONAL (FIXED) ===== */
-
+/* FOOTER */
 .footer-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -181,7 +248,6 @@ border-top:1px solid rgba(255,255,255,0.05);
 color:#22c55e;
 margin-bottom:12px;
 font-weight:600;
-letter-spacing:0.5px;
 }
 
 .footer-section p{
@@ -218,14 +284,12 @@ border-radius:50%;
 background:#1e293b;
 color:white;
 transition:0.3s;
-box-shadow:0 0 5px rgba(0,0,0,0.3);
 }
 
 .footer-icons a:hover{
 background:#22c55e;
 color:#020617;
 transform:translateY(-3px) scale(1.1);
-box-shadow:0 0 15px #22c55e;
 }
 
 footer hr{
@@ -240,7 +304,6 @@ text-align:center;
 padding:15px;
 font-size:13px;
 color:#94a3b8;
-letter-spacing:0.5px;
 background:#020617;
 }
 
@@ -290,9 +353,9 @@ justify-content:center;
 <img src="./pass.png" alt = "photo of Vinay Naga Sai Ram Badanala">
 <h1>Hi, I'm <span>Vinay Naga Sai Ram Badanala</span></h1>
 <p>Full Stack Java Developer 🚀</p>
-
-<a href="./Vinay Naga Sai Ram Badanala.pdf" class="btn">Download Resume</a>
-
+<a href="./Vinay Naga Sai Ram Badanala.pdf" class="btn download" download>
+⬇️ Download Resume
+</a>
 <p>📧 badanalavinay@gmail.com</p>
 <p>📱 7330641891</p>
 </section>
@@ -437,22 +500,43 @@ Dynamic final-year B.Tech Computer Science Engineering student with skills in Ja
 
 <div class="grid">
 
+<!-- Project 1 -->
 <div class="card">
-<h3>Game Review</h3>
-<p>Frontend web app using HTML, CSS, JS</p>
-<a href="https://github.com/vinaybadanala/GameReview">View Project →</a>
+<h3>🎮 Game Review</h3>
+
+<p>
+A responsive frontend web application built using HTML, CSS, and JavaScript.
+This project allows users to explore different games, view ratings, and read reviews.
+It focuses on clean UI design, smooth navigation, and user-friendly experience.
+</p>
+
+<div class="btn-group">
+<a href="https://vinaybadanala.github.io/GameReview/" target="_blank" class="btn live">🚀 Live Demo</a>
+<a href="https://github.com/vinaybadanala/GameReview" target="_blank" class="btn code">💻 Source Code</a>
 </div>
 
+</div>
+
+<!-- Project 2 -->
 <div class="card">
-<h3>Object Detection</h3>
-<p>ML project using Python</p>
-<a href="https://github.com/vinaybadanala/ObjectDetection">View Project →</a>
+<h3>🤖 Object Detection</h3>
+
+<p>
+An Machine Learning project developed using Python and OpenCV.
+This system detects and identifies objects in real-time using trained models.
+It demonstrates practical implementation of computer vision concepts.
+</p>
+
+<div class="btn-group">
+<a href="#" class="btn live">🚀 Live Demo</a>
+<a href="https://github.com/vinaybadanala/ObjectDetection" target="_blank" class="btn code">💻 Source Code</a>
+</div>
+
 </div>
 
 </div>
 
 </section>
-
 <!-- CONTACT -->
 <section class="section" id="contact">
 <h2 class="title">Contact</h2>
@@ -465,7 +549,7 @@ Dynamic final-year B.Tech Computer Science Engineering student with skills in Ja
 </a>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/917330641891?text=Hi%20Vinay%2C%20I%20saw%20your%20portfolio" target="_blank">
+<a href="https://wa.me/917330641891?text=Hey%20Vinay%2C%20I%20saw%20your%20portfolio" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -517,7 +601,7 @@ Dynamic final-year B.Tech Computer Science Engineering student with skills in Ja
 
 <div class="footer-icons">
 <a href="mailto:badanalavinay@gmail.com"><i class="fas fa-envelope"></i></a>
-<a href="https://wa.me/917330641891?text=Hi%20Vinay%2C%20I%20saw%20your%20portfolio"><i class="fab fa-whatsapp"></i></a>
+<a href=https://wa.me/917330641891?text=Hey%20Vinay%2C%20I%20saw%20your%20portfolio"><i class="fab fa-whatsapp"></i></a>
 <a href="https://github.com/vinaybadanala"><i class="fab fa-github"></i></a>
 <a href="https://www.linkedin.com/in/vinay-naga-sai-ram-badanala-a865422b4/"><i class="fab fa-linkedin"></i></a>
 </div>
