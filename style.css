@@ -133,16 +133,14 @@ color:#cbd5e1;
 }
 /* DOWNLOAD BUTTON SPECIAL */
 .btn.download{
-background-color:green;
+background-color:#22c55e;
 color:white;
-box-shadow:0 4px 15px rgba(249,115,22,0.4);
 position:relative;
 overflow:hidden;
 }
 
 .btn.download:hover{
 transform:translateY(-2px) scale(1.05);
-box-shadow:0 6px 20px rgba(249,115,22,0.6);
 }
 
 /* Glow animation */
@@ -167,7 +165,7 @@ display:inline-block;
 }
 
 .hero{
-gap:10px;   /* elements madhya spacing */
+gap:10px;   
 }
 /* PROJECT BUTTONS */
 .btn-group{
