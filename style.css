@@ -38,6 +38,7 @@ font-size:15px;
 font-weight:500;
 transition:0.3s;
 }
+
 nav a:hover{
 color:#0071ce;
 }
@@ -89,6 +90,23 @@ color:white;
 }
 .download:hover{
 background:#005fa3;
+transform:translateY(-3px);
+}
+.resume-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.view{
+background:#16a34a;
+color:white;
+}
+
+.view:hover{
+background:#15803d;
 transform:translateY(-3px);
 }
 .section{
